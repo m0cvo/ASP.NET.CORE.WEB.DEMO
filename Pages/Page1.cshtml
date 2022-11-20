@@ -11,5 +11,19 @@
 <div class="justify-content-evenly">
     <p>Let's talk about how to add new pages to your ASP.NET Core web app.  Firstly you need to right click on the Pages folder in Solution Explorer and select Add - Razor Page -
         Choose Razor Page Empty in the pop up and click continue. Give it a new name in the pop up form or just leave it with the Index1.cshtml name and click continue. A new page 
-        will be made with basic framework at the top.  The Page directive makes it routable and the model directive gives it a routable address.</p>
+        will be made with basic framework at the top.  The Page directive makes it routable and the model directive gives it a routable address. </p>
+    <p>
+    Beneath the model directive, between the curly brackets, add a ViewData["Title"] directive.  This is to set the title seen in the top of the page.  The page is then made up using
+standard HTML elements and tags.
+    </p>
+    <p>
+        Now we need to add our new page to the links seen at the top of each page.  This is where the routing comes in.  Open up the pages folder and then open up the shared folder 
+        in Solution Explorer.  Double click on _Layout.cshtml to open it up in the working area of VS.  In the centre of the page you will see an unordered list: ul class="navbar-nav flex-grow-1"
+        Within this list you will see the routing for both the /Index and /Privacy pages.  Simply copy one of these and paste it betweenthe two.  Adjust the routing information to /YourPage
+        and adjust the title text accordingly.  Save and run your program (CTRL=F5).  If you have not done so before, you will be asked to trust the server instance created by visual studio,
+        click yes and continue.  The website will open at the home page (/Index) and you will see your page listed in the navigation bar at the top.  Click the link and check that it goes there.
+    </p>
+    <p>
+        Finally, close the web page and close the command prompt screen that you will find in your task bar.
+    </p>
 </div>
