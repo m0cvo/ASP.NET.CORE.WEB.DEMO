@@ -1,0 +1,34 @@
+﻿@page
+@model Page2Model
+@{
+    ViewData["Title"] = "Page2";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Adding images</h1>
+</div>
+
+<div class="justify-content-evenly">
+  <p>Adding pictures is quite an easy task. Copy an image (or images) from the pictures folder on your PC Hard drive (or other location) and paste them into the wwwroot folder 
+    in solution explorer.  Once there, you can simply drag them across to the work screen and the code will self write for that image.  Make sure you insert it where you want it 
+    located within the page.  You can then add any size attributes afterwards within the line of code starting "img". 
+    </p>
+</div>
+
+<div>
+    <img src="~/aspnetcore.jpg" /><br />
+    <p>Good old ASP.NET Core</p>
+    <img src="~/hummingbirdhawkmothdm.jpg" />
+    <p>Humming Bird Hawk Moth</p>
+</div>
+<div class="justify-content-evenly">
+    <p>
+        Adding videos is equally easy.  Copy any video files (MP4) into the wwwroot folder and then drag them onto the work screen in the place you want them to appear. Of course, 
+        you should always ensure that you have the necessary permissions to use the pictures i.e. they are your pictures and you are not infringing on any copyrights.
+    </p>
+</div>
+<div>
+    <video controls="controls">
+        <source src="~/mah00224.mp4" type="video/mp4" />
+    </video>
+</div>
