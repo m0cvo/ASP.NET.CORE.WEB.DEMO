@@ -1,0 +1,22 @@
+﻿<h3>Name1</h3>
+
+<p>
+    <label>
+        Please enter your name:
+        <input @bind="name" /> ;
+    </label>
+</p>
+
+<button class="btn btn-primary" @onclick="getName">Enter</button>
+
+<p role="status">Hello: @Name I hope you are having a good day</p>
+
+@code {
+    private string name { get; set; }
+    private string Name = "";
+
+    private void getName()
+    {
+        Name = name;
+    }
+}
