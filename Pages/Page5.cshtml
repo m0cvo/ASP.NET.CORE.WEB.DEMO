@@ -10,8 +10,21 @@
 
 <div class="justify-content-evenly">
     <p>
-        This page is currently under construction
+        In order to use a blazor app (razor component) in your web app, you need to add a new folder to your project in solution explorer named Components.  Right click on the 
+        Components folder and add razor component.  Name it what you like but note that it will have a .razor extention rather than a .cshtml one.  Blazor is server side as 
+        opposed to client side so you need to alter the program.cs file to reflect this.  In the services section (near the top) you need to insert <h5>builder.Services.AddServerSideBlazor();</h5>
+        Then, further down the page, you need to insert <h5>app.MapBlazorHub();</h5>  As a demonstration, I used a razor component named Name1.razor. This can be seen in action below 
+        this text which is rendered using straight HTML.  To call the razor component you need to add the following <h5>component type="typeof(Components.Name1)" render-mode="ServerPrerendered"</h5>
+        inside angle brackets to your cshtml page.  Inside the _Layout.cshtml page you need to add <h5>script src="_framework/blazor.server.js"</h5> to the script section at the bottom.
     </p>
 </div>
 
 <component type="typeof(Components.Name1)" render-mode="ServerPrerendered" />
+
+<div class="justify-content-evenly">
+    <p>
+        The razor component is written as follows:
+
+    </p>
+    <img src="~/name1razor.jpg" />
+</div>

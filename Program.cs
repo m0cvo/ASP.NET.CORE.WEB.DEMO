@@ -10,7 +10,7 @@ namespace ASP.NET.CORE.WEB.DEMO
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            
+            builder.Services.AddServerSideBlazor();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
