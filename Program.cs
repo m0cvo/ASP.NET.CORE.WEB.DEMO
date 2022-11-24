@@ -1,3 +1,5 @@
+
+
 namespace ASP.NET.CORE.WEB.DEMO
 {
     public class Program
@@ -8,7 +10,7 @@ namespace ASP.NET.CORE.WEB.DEMO
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -19,12 +21,15 @@ namespace ASP.NET.CORE.WEB.DEMO
                 app.UseHsts();
             }
 
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.MapBlazorHub();
 
             app.MapRazorPages();
 
